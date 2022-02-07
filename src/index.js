@@ -12,22 +12,22 @@ class Example extends React.Component {
           filter: true,
           setCellProps: () => ({
             style: {
-              width: "50px",
+              width: "40px",
               whiteSpace: "wrap",
               position: "sticky",
-              left: "20px",
+              left: "0px",
               background: "white",
-              zIndex: 100
+              zIndex: 101
             }
           }),
           setCellHeaderProps: () => ({
             style: {
-              width: "50px",
+              width: "40px",
               whiteSpace: "wrap",
               position: "sticky",
-              left: "20px",
+              left: "0px",
               background: "white",
-              zIndex: 101
+              zIndex: 102
             }
           })
         }
@@ -38,22 +38,22 @@ class Example extends React.Component {
           filter: true,
           setCellProps: () => ({
             style: {
-              width: "50px",
+              width: "40px",
               whiteSpace: "wrap",
               position: "sticky",
-              left: "100px",
+              left: "80px",
               background: "white",
-              zIndex: 102
+              zIndex: 101
             }
           }),
           setCellHeaderProps: () => ({
             style: {
-              width: "50px",
+              width: "40px",
               whiteSpace: "wrap",
               position: "sticky",
-              left: "100px",
+              left: "80px",
               background: "white",
-              zIndex: 103
+              zIndex: 102
             }
           })
         }
@@ -64,22 +64,22 @@ class Example extends React.Component {
           filter: true,
           setCellProps: () => ({
             style: {
-              width: "50px",
-              whiteSpace: "nowrap",
+              width: "40px",
+              whiteSpace: "wrap",
               position: "sticky",
-              left: "170px",
+              left: "80px",
               background: "white",
-              zIndex: 104
+              zIndex: 101
             }
           }),
           setCellHeaderProps: () => ({
             style: {
-              width: "50px",
-              whiteSpace: "nowrap",
+              width: "40px",
+              whiteSpace: "wrap",
               position: "sticky",
-              left: "170px",
+              left: "80px",
               background: "white",
-              zIndex: 105
+              zIndex: 102
             }
           })
         }
@@ -90,22 +90,22 @@ class Example extends React.Component {
           filter: true,
           setCellProps: () => ({
             style: {
-              width: "50px",
-              whiteSpace: "nowrap",
+              width: "40px",
+              whiteSpace: "wrap",
               position: "sticky",
-              left: "250px",
+              left: "80px",
               background: "white",
-              zIndex: 106
+              zIndex: 101
             }
           }),
           setCellHeaderProps: () => ({
             style: {
-              width: "50px",
-              whiteSpace: "nowrap",
+              width: "40px",
+              whiteSpace: "wrap",
               position: "sticky",
-              left: "250px",
+              left: "80px",
               background: "white",
-              zIndex: 107
+              zIndex: 102
             }
           })
         }
@@ -113,13 +113,16 @@ class Example extends React.Component {
       {
         name: "Salary",
         options: {
+          width: "40px",
           filter: true,
-          sort: false
+          sort: false,
+          zIndex: 103
         }
       },
       {
         name: "Salary1",
         options: {
+          width: "40px",
           filter: true,
           sort: false
         }
@@ -127,6 +130,7 @@ class Example extends React.Component {
       {
         name: "Salary2",
         options: {
+          width: "40px",
           filter: true,
           sort: false
         }
@@ -134,17 +138,18 @@ class Example extends React.Component {
       {
         name: "Phone Number",
         options: {
+          width: "40px",
           filter: true,
           sort: false,
-          setCellProps: () => ({ style: { whiteSpace: "nowrap" } })
+          setCellProps: () => ({ style: { whiteSpace: "wrap" } })
         }
       }
     ];
 
     const data = [
       [
-        "Gabby George",
-        "Business Analyst Lorem Ipsum - Sample Column Value #1234567890 Testing",
+        "Gabby ",
+        "Be dddg",
         "Minneapolis",
         30,
         "$100,000",
@@ -450,12 +455,13 @@ class Example extends React.Component {
       responsive: "standard",
       fixedHeader: true,
       fixedSelectColumn: false,
-      tableBodyHeight: "400px"
+      tableBodyHeight: "480px",
+      tableBodyWidth: "320px"
     };
 
     return (
       <MUIDataTable
-        title={"ACME Employee list"}
+        title={"Spott"}
         data={data}
         columns={columns}
         options={options}
