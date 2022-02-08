@@ -16,7 +16,6 @@ class Example extends React.Component {
       {
         name: "Asset",
         options: {
-          width: "40px",
           filter: true,
           sort: false,
           setCellProps: () => ({
@@ -44,7 +43,6 @@ class Example extends React.Component {
       {
         name: "Free",
         options: {
-          width: "40px",
           filter: true,
           sort: false,
           setCellProps: () => ({
@@ -72,7 +70,6 @@ class Example extends React.Component {
       {
         name: "Locked",
         options: {
-          width: "40px",
           filter: true,
           sort: false,
           setCellProps: () => ({
@@ -100,7 +97,6 @@ class Example extends React.Component {
       {
         name: "In_Usdt",
         options: {
-          width: "40px",
           filter: true,
           sort: false,
           setCellProps: () => ({
@@ -132,8 +128,6 @@ class Example extends React.Component {
         columns.push({
           name: head,
           options: {
-            width: "40px",
-            filter: true,
             sort: false,
             setCellProps: () => ({
               style: {
@@ -142,7 +136,7 @@ class Example extends React.Component {
                 position: "sticky",
                 left: "80px",
                 background: "white",
-                zIndex: 98
+                zIndex: 96
               }
             }),
             setCellHeaderProps: () => ({
@@ -152,7 +146,7 @@ class Example extends React.Component {
                 position: "sticky",
                 left: "80px",
                 background: "white",
-                zIndex: 99
+                zIndex: 97
               }
             })
           }
@@ -168,6 +162,7 @@ class Example extends React.Component {
     const options = {
       filter: true,
       pagination: false,
+      rowHover: false,
       filterType: "dropdown",
       responsive: "standard",
       fixedHeader: true,
