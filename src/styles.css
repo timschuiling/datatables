@@ -2,3 +2,8 @@
   font-family: sans-serif;
   text-align: center;
 }
+.table {
+  border: 10px solid #000000;
+  border-collapse: collapse;
+  border-spacing: 0px;
+}

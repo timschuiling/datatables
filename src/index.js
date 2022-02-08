@@ -2,20 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "@material-ui/core";
 import MUIDataTable from "mui-datatables";
+import { jsondata } from "./data";
+import { ThemeProvider } from "@mui/styles";
 
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
+let data = [];
+let list = Array.from(jsondata());
 class Example extends React.Component {
   render() {
     const columns = [
       {
         name: "Asset",
         options: {
+          width: "40px",
           filter: true,
+          sort: false,
           setCellProps: () => ({
             style: {
               width: "40px",
               whiteSpace: "wrap",
               position: "sticky",
-              left: "0px",
+              left: "10px",
               background: "white",
               zIndex: 101
             }
@@ -25,7 +34,7 @@ class Example extends React.Component {
               width: "40px",
               whiteSpace: "wrap",
               position: "sticky",
-              left: "0px",
+              left: "10px",
               background: "white",
               zIndex: 102
             }
@@ -35,7 +44,9 @@ class Example extends React.Component {
       {
         name: "Free",
         options: {
+          width: "40px",
           filter: true,
+          sort: false,
           setCellProps: () => ({
             style: {
               width: "40px",
@@ -43,7 +54,7 @@ class Example extends React.Component {
               position: "sticky",
               left: "80px",
               background: "white",
-              zIndex: 101
+              zIndex: 103
             }
           }),
           setCellHeaderProps: () => ({
@@ -53,7 +64,7 @@ class Example extends React.Component {
               position: "sticky",
               left: "80px",
               background: "white",
-              zIndex: 102
+              zIndex: 104
             }
           })
         }
@@ -61,7 +72,9 @@ class Example extends React.Component {
       {
         name: "Locked",
         options: {
+          width: "40px",
           filter: true,
+          sort: false,
           setCellProps: () => ({
             style: {
               width: "40px",
@@ -69,7 +82,7 @@ class Example extends React.Component {
               position: "sticky",
               left: "80px",
               background: "white",
-              zIndex: 101
+              zIndex: 105
             }
           }),
           setCellHeaderProps: () => ({
@@ -79,7 +92,7 @@ class Example extends React.Component {
               position: "sticky",
               left: "80px",
               background: "white",
-              zIndex: 102
+              zIndex: 106
             }
           })
         }
@@ -87,7 +100,9 @@ class Example extends React.Component {
       {
         name: "In_Usdt",
         options: {
+          width: "40px",
           filter: true,
+          sort: false,
           setCellProps: () => ({
             style: {
               width: "40px",
@@ -95,7 +110,7 @@ class Example extends React.Component {
               position: "sticky",
               left: "80px",
               background: "white",
-              zIndex: 101
+              zIndex: 107
             }
           }),
           setCellHeaderProps: () => ({
@@ -105,352 +120,54 @@ class Example extends React.Component {
               position: "sticky",
               left: "80px",
               background: "white",
-              zIndex: 102
+              zIndex: 108
             }
           })
-        }
-      },
-      {
-        name: "Salary",
-        options: {
-          width: "40px",
-          filter: true,
-          sort: false,
-          zIndex: 103
-        }
-      },
-      {
-        name: "Salary1",
-        options: {
-          width: "40px",
-          filter: true,
-          sort: false
-        }
-      },
-      {
-        name: "Salary2",
-        options: {
-          width: "40px",
-          filter: true,
-          sort: false
-        }
-      },
-      {
-        name: "Phone Number",
-        options: {
-          width: "40px",
-          filter: true,
-          sort: false,
-          setCellProps: () => ({ style: { whiteSpace: "wrap" } })
         }
       }
     ];
 
-    const data = [
-      [
-        "Gabby ",
-        "Be dddg",
-        "Minneapolis",
-        30,
-        "$100,000",
-        "$100,000",
-        "$100,000",
-        "555-5555"
-      ],
-      [
-        "Aiden Lloyd",
-        "Business Consultant",
-        "Dallas",
-        55,
-        "$200,000",
-        "$200,000",
-        "$200,000",
-        ""
-      ],
-      [
-        "Jaden Collins",
-        "Attorney",
-        "Santa Ana",
-        27,
-        "$500,000",
-        "$500,000",
-        "$500,000",
-        "555-5555"
-      ],
-      [
-        "Franky Rees",
-        "Business Analyst",
-        "St. Petersburg",
-        22,
-        "$50,000",
-        "$50,000",
-        "$50,000",
-        "555-5555"
-      ],
-      [
-        "Aaren Rose",
-        "Business Consultant",
-        "Toledo",
-        28,
-        "$75,000",
-        "$75,000",
-        "$75,000",
-        "555-5555"
-      ],
-      [
-        "Blake Duncan",
-        "Business Management Analyst",
-        "San Diego",
-        65,
-        "$94,000",
-        "$94,000",
-        "$94,000",
-        "555-3333"
-      ],
-      [
-        "Frankie Parry",
-        "Agency Legal Counsel",
-        "Jacksonville",
-        71,
-        "$210,000",
-        "$210,000",
-        "$210,000",
-        "555-5555"
-      ],
-      [
-        "Lane Wilson",
-        "Commercial Specialist",
-        "Omaha",
-        19,
-        "$65,000",
-        "$65,000",
-        "$65,000",
-        "555-5555"
-      ],
-      [
-        "Robin Duncan",
-        "Business Analyst",
-        "Los Angeles",
-        20,
-        "$77,000",
-        "$77,000",
-        "$77,000",
-        "555-3333"
-      ],
-      [
-        "Mel Brooks",
-        "Business Consultant",
-        "Oklahoma City",
-        37,
-        "$135,000",
-        "$135,000",
-        "$135,000",
-        "555-5555"
-      ],
-      [
-        "Harper White",
-        "Attorney",
-        "Pittsburgh",
-        52,
-        "$420,000",
-        "$420,000",
-        "$420,000",
-        "555-5555"
-      ],
-      [
-        "Kris Humphrey",
-        "Agency Legal Counsel",
-        "Laredo",
-        30,
-        "$150,000",
-        "$150,000",
-        "$150,000",
-        "555-5555"
-      ],
-      [
-        "Frankie Long",
-        "Industrial Analyst",
-        "Austin",
-        31,
-        "$170,000",
-        "$170,000",
-        "$170,000",
-        ""
-      ],
-      [
-        "Brynn Robbins",
-        "Business Analyst",
-        "Norfolk",
-        22,
-        "$90,000",
-        "$90,000",
-        "$90,000",
-        "555-0000"
-      ],
-      [
-        "Justice Mann",
-        "Business Consultant",
-        "Chicago",
-        24,
-        "$133,000",
-        "$133,000",
-        "$133,000",
-        "555-5555"
-      ],
-      [
-        "Addison Navarro",
-        "Business Management Analyst",
-        "New York",
-        50,
-        "$295,000",
-        "$295,000",
-        "$295,000",
-        "555-5555"
-      ],
-      [
-        "Jesse Welch",
-        "Agency Legal Counsel",
-        "Seattle",
-        28,
-        "$200,000",
-        "$200,000",
-        "$200,000",
-        "555-5555"
-      ],
-      [
-        "Eli Mejia",
-        "Commercial Specialist",
-        "Long Beach",
-        65,
-        "$400,000",
-        "$400,000",
-        "$400,000",
-        "555-5555"
-      ],
-      [
-        "Gene Leblanc",
-        "Industrial Analyst",
-        "Hartford",
-        34,
-        "$110,000",
-        "$110,000",
-        "$110,000",
-        "555-5555"
-      ],
-      [
-        "Danny Leon",
-        "Computer Scientist",
-        "Newark",
-        60,
-        "$220,000",
-        "$220,000",
-        "$220,000",
-        "555-5555"
-      ],
-      [
-        "Lane Lee",
-        "Corporate Counselor",
-        "Cincinnati",
-        52,
-        "$180,000",
-        "$180,000",
-        "$180,000",
-        "555-5555"
-      ],
-      [
-        "Jesse Hall",
-        "Business Analyst",
-        "Baltimore",
-        44,
-        "$99,000",
-        "$99,000",
-        "$99,000",
-        "555-5555"
-      ],
-      [
-        "Danni Hudson",
-        "Agency Legal Counsel",
-        "Tampa",
-        37,
-        "$90,000",
-        "$90,000",
-        "$90,000",
-        "555-5555"
-      ],
-      [
-        "Terry Macdonald",
-        "Commercial Specialist",
-        "Miami",
-        39,
-        "$140,000",
-        "$140,000",
-        "$140,000",
-        "555-5555"
-      ],
-      [
-        "Justice Mccarthy",
-        "Attorney",
-        "Tucson",
-        26,
-        "$330,000",
-        "$330,000",
-        "$330,000",
-        "555-5555"
-      ],
-      [
-        "Silver Carey",
-        "Computer Scientist",
-        "Memphis",
-        47,
-        "$250,000",
-        "$250,000",
-        "$250,000",
-        "555-5555"
-      ],
-      [
-        "Franky Miles",
-        "Industrial Analyst",
-        "Buffalo",
-        49,
-        "$190,000",
-        "$190,000",
-        "$190,000",
-        "555-5555"
-      ],
-      [
-        "Glen Nixon",
-        "Corporate Counselor",
-        "Arlington",
-        44,
-        "$80,000",
-        "$80,000",
-        "$80,000",
-        "555-5555"
-      ],
-      [
-        "Gabby Strickland",
-        "Business Process Consultant",
-        "Scottsdale",
-        26,
-        "$45,000",
-        "$45,000",
-        "$45,000",
-        "555-5555"
-      ],
-      [
-        "Mason Ray",
-        "Computer Scientist",
-        "San Francisco",
-        39,
-        "$142,000",
-        "$142,000",
-        "$142,000",
-        "555-5555"
-      ]
-    ];
+    Object.keys(list[0]).map((head, idx) => {
+      if (idx > 3)
+        columns.push({
+          name: head,
+          options: {
+            width: "40px",
+            filter: true,
+            sort: false,
+            setCellProps: () => ({
+              style: {
+                width: "40px",
+                whiteSpace: "wrap",
+                position: "sticky",
+                left: "80px",
+                background: "white",
+                zIndex: 98
+              }
+            }),
+            setCellHeaderProps: () => ({
+              style: {
+                width: "40px",
+                whiteSpace: "wrap",
+                position: "sticky",
+                left: "80px",
+                background: "white",
+                zIndex: 99
+              }
+            })
+          }
+        });
+      return idx;
+    });
+
+    ///Object.keys(list).map((e,a) => (test.push(a)))
+    Object.keys(list).map((e, a) =>
+      data.push(Object.values(list[e]).map((v, b) => v))
+    );
 
     const options = {
       filter: true,
+      pagination: false,
       filterType: "dropdown",
       responsive: "standard",
       fixedHeader: true,
@@ -460,12 +177,14 @@ class Example extends React.Component {
     };
 
     return (
-      <MUIDataTable
-        title={"Spott"}
-        data={data}
-        columns={columns}
-        options={options}
-      />
+      <ThemeProvider theme={theme}>
+        <MUIDataTable
+          title={"spoTBot"}
+          data={data}
+          columns={columns}
+          options={options}
+        />
+      </ThemeProvider>
     );
   }
 }
